@@ -1,0 +1,27 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-06-04 12:57:08.698146",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[[\"vehicle\",\"status\",\"=\",\"Active\",false]],\"fields\":[[\"make\",\"vehicle\"],[\"_aggregate_column\",\"vehicle\"]],\"order_by\":\"`tabvehicle`.tabvehicle`.creation desc, `tabvehicle`.name desc\",\"page_length\":20,\"column_widths\":{\"make\":120,\"_aggregate_column\":200},\"group_by\":{\"group_by\":\"`tabvehicle`.`make`\",\"aggregate_function\":\"count\"}}",
+ "letterhead": null,
+ "modified": "2024-06-04 13:18:05.427378",
+ "modified_by": "Administrator",
+ "module": "Fleet Managements",
+ "name": "Active by vehicle",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "vehicle",
+ "report_name": "Active by vehicle",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

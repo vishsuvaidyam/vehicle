@@ -6,6 +6,16 @@ app_email = "vish@gmail.com"
 app_license = "mit"
 # required_apps = []
 
+fixtures=[
+  {
+       "dt":"Vehicle Type",
+        "filters":{
+       "is_stantard":1
+   }
+   }
+]
+ 
+
 # Includes in <head>
 # ------------------
 
@@ -102,10 +112,10 @@ app_license = "mit"
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
-#
+permission_query_conditions = {
+	"Vehicle": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+}
+
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
@@ -122,33 +132,19 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+ "Blog Post":{
+     "before_insert":"fleet_management.api.handle_new_blog_post"
+ }
+}
 
 # Scheduled Tasks
 # ---------------
 
 # scheduler_events = {
-# 	"all": [
-# 		"fleet_managements.tasks.all"
-# 	],
 # 	"daily": [
-# 		"fleet_managements.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"fleet_managements.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"fleet_managements.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"fleet_managements.tasks.monthly"
-# 	],
+# 		"fleet_management.api.handle_new_blog_post"
+# 	]
 # }
 
 # Testing
@@ -162,7 +158,7 @@ app_license = "mit"
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "fleet_managements.event.get_events"
 # }
-#
+
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps

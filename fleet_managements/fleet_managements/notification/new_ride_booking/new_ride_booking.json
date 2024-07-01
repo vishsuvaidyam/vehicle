@@ -1,0 +1,31 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2024-06-03 22:35:12.124354",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Ride Order",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "vish chek this new booking form {{doc.full_name}};\n\n<a href=\"{{doc.get_url}}\">New Booking</a>\n",
+ "message_type": "Markdown",
+ "modified": "2024-06-04 10:22:52.213851",
+ "modified_by": "Administrator",
+ "module": "Fleet Managements",
+ "name": "New Ride Booking",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  },
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "subject": "New Booking Form"
+}

@@ -1,0 +1,18 @@
+[
+ {
+  "description": "A Vehicle is four-wheeler",
+  "docstatus": 0,
+  "doctype": "Vehicle Type",
+  "is_stantard": 1,
+  "modified": "2024-06-07 13:35:28.396378",
+  "name": "Four_Wheeler"
+ },
+ {
+  "description": "A heavy truck",
+  "docstatus": 0,
+  "doctype": "Vehicle Type",
+  "is_stantard": 1,
+  "modified": "2024-06-07 13:35:20.537358",
+  "name": "Heavy Truck"
+ }
+]
